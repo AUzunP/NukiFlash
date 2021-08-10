@@ -35,12 +35,6 @@ public class MainFrame extends JFrame{
 		
 		CardPanel cardPanel = new CardPanel();
 		
-		Card card1 = new Card("Powerhouse of the cell", "Mitochondria");
-		Card card2 = new Card("protein stuff made where", "ribosomes");
-		
-		cardPanel.addToCardsList(card1);
-		cardPanel.addToCardsList(card2);
-		
 		this.add(cardPanel, BorderLayout.CENTER);
 		
 	}

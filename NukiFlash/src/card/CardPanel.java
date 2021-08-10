@@ -13,13 +13,13 @@ import customComponents.CustomButton;
 
 public class CardPanel extends JPanel{
 
-	private ArrayList<Card> cardsList = new ArrayList<Card>();
+	private CardDictionary cardDictionary = new CardDictionary();
 	
 	public CardPanel() {
 		
 		setLayout(new BorderLayout());
 		
-		
+		CardDictionary cardDictionary = new CardDictionary();
 		layoutComponents();
 		
 	}
@@ -54,21 +54,11 @@ public class CardPanel extends JPanel{
 	
 	public void flipCard() {
 		if (temp % 2 == 0) {
-			cardText.setText(cardsList.get(0).getBackFaceQ());			
+			cardText.setText(cardDictionary.cardsList.get(0).getBackFaceQ());
 		} else {
-			cardText.setText(cardsList.get(0).getFrontFaceA());
+			cardText.setText(cardDictionary.cardsList.get(0).getFrontFaceA());
 		}
 		temp++;
-	}
-	
-	public void addToCardsList(Card cardToAdd) {
-		
-		cardsList.add(cardToAdd);
-		
-	}
-	
-	public void removeFromCardsList(Card cardToRemove) {
-		
 	}
 	
 }
